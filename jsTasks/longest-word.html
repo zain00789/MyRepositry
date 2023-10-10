@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Longest word</title>
+</head>
+
+<body>
+  <p id="array"></p>
+
+
+  <script>
+    function largeword(str){
+      let arr = str.split(' ')
+      let longword = ''
+      for(const word of arr){
+        if(word.length > longword.length){
+          longword = word
+        }
+      }
+       console.log(longword)
+      return longword
+    }
+    let str = "We are the so-called Vikings from the north."
+    largeword(str)
+    const longestword = largeword(str)
+    document.getElementById("array").innerHTML = longestword;
+  </script>
+</body>
+
+</html>

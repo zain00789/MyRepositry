@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Factorial</title>
+</head>
+
+<body>
+  <p id="fact"></p>
+<script>
+  let number = parseInt(prompt("Enter you Factorial number"));
+  let solution = calculateFact(number);
+  document.getElementById("fact").innerHTML = "Factorial is " + solution;
+  function calculateFact(n){
+    if (n === 0 || n === 1) {
+      return 1;
+    } else {
+      return n * calculateFact(n - 1);
+    }
+  }
+</script>
+</body>
+
+</html>

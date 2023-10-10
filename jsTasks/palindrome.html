@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Palindrome</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p id="palin"></p>
+
+  <script>
+    function palindrom(word) {
+      let setarray = word.split('')
+      let reversearray = setarray.reverse()
+      let joinarray = reversearray.join('')
+      if(word == joinarray){
+          document.getElementById("palin").innerHTML = 'number is Palindrome'
+      }
+      else {
+         document.getElementById("palin").innerHTML = 'number is not Palindrome'
+      }
+    }
+    const writestring = prompt("Enter you word")
+    palindrom(writestring)
+  </script>
+</body>
+
+</html>

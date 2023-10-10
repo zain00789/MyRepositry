@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Anagrams</title>
+</head>
+
+<body>
+<p id="result"></p>
+<script>
+   function anagrams(str1, str2) 
+   {
+        str1 = str1.replace().toLowerCase();
+        str2 = str2.replace().toLowerCase();
+        return str1.split('').sort().join('') ===         
+        str2.split('').sort().join('');
+    }
+    const str1 = prompt("Enter your First String");
+    const str2 = prompt("Enter your Second String");
+    const result = (anagrams(str1, str2));
+    if (result) {
+        document.getElementById('result').innerHTML = 'The two strings are anagrams.';
+    } else {
+        document.getElementById('result').innerHTML = 'The two strings are not anagrams.';
+    }
+  </script>
+</body>
+
+</html>
